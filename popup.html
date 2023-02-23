@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/xlsx.full.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .btn {
+        width: 256px;
+      }
+      span.badge {
+        float: none !important;
+        font-size: larger !important;
+        margin-left: 0 !important;
+        margin-bottom: 16px !important;
+        display: block;
+        padding: 0 !important;
+      }
+      span.badge.new {
+        font-weight: bold !important;
+      }
+      #products {
+        background: #533582 !important;
+      }
+      .negMessage {
+        font-size: medium;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: red;
+        font-weight: bold;
+      }
+      .btnInfo{
+        font-size: medium;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .rightSec{
+        font-size: medium;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #loading {
+    background: url('https://tenor.com/view/loading-buffering-buffer-load-circle-gif-17796441') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
+}
+
+.exportBtn{
+   
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+
+}
+    </style>
+  </head>
+  <body style="width: 350px">
+    
+    <div class="container">
+   
+      <br />
+
+      <form action="#" class="center-align">
+        <h5>POC Woocommerce Scrapper!!!</h5>
+        <br />
+
+        <div id="isWooMsg" style="display: none">
+          <!-- <span class="new badge green" data-badge-caption="The active tab is a Woocommerce store"></span> -->
+        </div>
+
+        <div id="isNotWooMsg" style="display: none">
+          <span class="negMessage">
+            Current site is not Woocommerce site.... This application will not
+            work here.</span
+          >
+        </div>
+
+        <div class="row cntlBtn" id="btn1" style="display: none">
+          <div class="col s12">
+           <span class="btnInfo"> No.Of Product Count: </span><span class="rightSec" id="product_count"></span>
+          </div>
+        </div>
+
+        <div class="row cntlBtn" id="btn2" style="display: none">
+          <div class="col s12">
+            <span class="btnInfo">
+                No.Of Collections Count: </span>
+              <span class="rightSec" id="collection_count"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="row cntlBtn" id="btn3" style="display: none">
+            <button class="exportBtn" id="export"> Export/ View Item </button>
+        </div>
+      </form>
+    </div>
+
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+  </body>
+</html>

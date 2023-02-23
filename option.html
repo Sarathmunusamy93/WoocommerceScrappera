@@ -1,0 +1,131 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<html>
+  <head>
+    <title>Do Scrap</title>
+    <style>
+      /* CSS */
+      .theader {
+      }
+      #table {
+        padding-left: 0px;
+        padding-top: 10px;
+      }
+      .apptitle {
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        letter-spacing: 0em;
+        margin-left: 30%;
+      }
+
+      .userUtilitiesArea {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-left: 62%;
+      }
+      #cover-spin {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        z-index: 9999;
+        display: none;
+      }
+
+      @-webkit-keyframes spin {
+        from {
+          -webkit-transform: rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      #cover-spin::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 48%;
+        top: 40%;
+        width: 40px;
+        height: 40px;
+        border-style: solid;
+        border-color: black;
+        border-top-color: transparent;
+        border-width: 4px;
+        border-radius: 50%;
+        -webkit-animation: spin 0.8s linear infinite;
+        animation: spin 0.8s linear infinite;
+      }
+    </style>
+    <!-- link to non-persistent background script -->
+
+    <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./external/bootstrap.min.css" />
+    <script src="./external/bootstrap.min.js"></script>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  </head>
+  <body>
+    <div class="container">
+      <div id="cover-spin"></div>
+
+      <div class="apptitle">Woocommerce Scrapped Data</div>
+      <div class="userUtilitiesArea">
+        <div class="tableTitle" id="tblTitle"></div>
+        <div class="downloadOptions">
+          <button class="btn btn-primary downloadbtn" id="dwnJson">
+            Download JSON
+          </button>
+          <button class="btn btn-primary downloadbtn" id="dwnexcel">
+            Download Excel
+          </button>
+          <button class="btn btn-primary downloadbtn" id="dwnPDF">
+            Download PDF
+          </button>
+        </div>
+      </div>
+
+
+
+      <table id="table" class="table table-striped">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>category</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <!-- HTML !-->
+    <!-- <button class="button-1" id="doScrap" role="button">Do Scrap</button> -->
+    <script src="option.js"></script>
+    <!-- <script src="./external/jspdf.plugin.autotable.min.js"></script> -->
+    <script src="./external/tableHTMLExport.js"></script>
+  </body>
+</html>

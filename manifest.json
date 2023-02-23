@@ -1,0 +1,26 @@
+{
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "service_worker": "backgroundScript.js",
+    "type": "module"
+  },
+
+  "options_page": "option.html",
+  "content_scripts": [
+    {
+      "js": ["js/content.js"],
+      "matches": ["https://*/*", "http://*/*"]
+    }
+  ],
+  "description": "POC scraper for Woocommerce",
+  "icons": {},
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkdmXlG5S4oocQXHd6eKdGDVNK+LeaEYKjNlWBBKhoYd26J6M8n+zZU1Z3OinVChw71MXjoie8Nb1/Hv+fYe5ijRaNeK0TyI53q0q4gWfa3koK0O2zTnvCOhxq58joF3kReyN01afk/AshBNOIKeYTNSEjNbeWSJRTj+eutg7MLubSQ2tVZjb6WYkRSrUBPYvKo9TQvsfxRTFh7l8lSMfyBfgT2HWyKAw7pUlicRLpsurQ2Id+rRS0RCAImjF8yb6Ci1MKffxzOtbQ2UMVT5LwjsxasVSjQReQnc7t039UdDIC2XtKj+S4Wbe7zodeMfz3Q5mIGfP6qKhfQXr1h/i0QIDAQAB",
+  "manifest_version": 3,
+  "name": "SAMPLE -- Woocommerce Scraper",
+  "permissions": ["tabs"],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "0.0.1"
+}
