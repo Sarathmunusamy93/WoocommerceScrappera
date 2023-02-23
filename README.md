@@ -17,6 +17,6 @@
 ![](https://github.com/Sarathmunusamy93/WoocommerceScrappera/blob/main/Scrennshoot/Ouput%20Page.png?raw=true)
 
 > For non Woocommerce sites, this extension will not work.
-![](https://github.com/Sarathmunusamy93/WoocommerceScrappera/blob/main/Scrennshoot/Ouput%20Page.png?raw=true)
+![](https://github.com/Sarathmunusamy93/WoocommerceScrappera/blob/main/Scrennshoot/other%20page.png?raw=true)
 
 
